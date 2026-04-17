@@ -136,6 +136,60 @@
     }
     .btn--orange:hover { background: var(--orange-dark); }
 
+    .btn--outline {
+      background: transparent;
+      color: var(--navy);
+      border: 2px solid var(--border);
+    }
+    .btn--outline:hover { border-color: var(--navy); background: var(--card-bg); }
+
+    .btn--disabled {
+      background: var(--border);
+      color: var(--light-grey);
+      cursor: not-allowed;
+    }
+    .btn--disabled:hover { transform: none; background: var(--border); }
+
+    /* ── Install section ── */
+
+    .install-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .install-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .install-card h3 {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .install-card p {
+      font-size: 14px;
+      color: var(--grey);
+      margin-bottom: 16px;
+    }
+
+    .install-card .btn {
+      width: 100%;
+      max-width: 260px;
+    }
+
+    .install-icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
     /* ── Replaced words (demo) — exact match of extension content/styles.css ── */
 
     .sl-word {
@@ -445,6 +499,34 @@
     </div>
   </section>
 
+  <section id="install">
+    <div class="container">
+      <div class="section-title">
+        <h2>Install the extension</h2>
+        <p>Free forever. Works on Firefox today. Chrome pending review.</p>
+      </div>
+      <div class="install-grid">
+        <div class="install-card">
+          <span class="install-icon">&#128008;</span>
+          <h3>Firefox</h3>
+          <p>Live on Mozilla Add-ons. One-click install.</p>
+          <a
+            href="https://addons.mozilla.org/en-US/firefox/addon/sideload-spanish/"
+            class="btn btn--orange"
+            target="_blank"
+            rel="noopener"
+          >Add to Firefox</a>
+        </div>
+        <div class="install-card">
+          <span class="install-icon">&#127760;</span>
+          <h3>Chrome</h3>
+          <p>Submitted to the Chrome Web Store. Awaiting review.</p>
+          <span class="btn btn--disabled" aria-disabled="true">Pending review</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="container">
       <div class="section-title">
@@ -518,7 +600,7 @@
         <p>Join the mailing list and I&rsquo;ll use that demand signal to decide whether to ship cross-device sync.</p>
       </div>
       <div class="waitlist-panel">
-        <p>No checkout yet. Just leave your email and I&rsquo;ll send an update if sync moves from idea to launch.</p>
+        <p>No checkout yet. Leave your email and I&rsquo;ll send updates if sync moves from idea to launch.</p>
         <form
           action="https://buttondown.com/api/emails/embed-subscribe/sideloadspanish"
           method="post"
@@ -535,7 +617,7 @@
           <input type="hidden" name="metadata__interest" value="sync-waitlist" />
           <button type="submit" class="btn btn--orange">Join the Mailing List</button>
         </form>
-        <p class="waitlist-footnote">Powered by Buttondown. No analytics, no checkout flow, just email updates.</p>
+        <p class="waitlist-footnote">Powered by Buttondown. No analytics, no checkout flow, just occasional email updates.</p>
       </div>
     </div>
   </section>
